@@ -5,8 +5,9 @@ import typewiseAlert.BreachType;
 public class ControllerAlert implements IAlert {
 
 	@Override
-	public void sendToTarget(BreachType breachType) {
+	public boolean sendToTarget(BreachType breachType) {
 		int header = 0xfeed;
-	    System.out.printf("%i : %i\n", header, breachType);
+	    System.out.printf("%d : %s\n", header, breachType.name());
+	    return true;
 	}
 }

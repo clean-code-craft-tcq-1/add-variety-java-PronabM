@@ -13,12 +13,12 @@ public class TypewiseAlert
       return coolingType.getInstance().classifyTemperatureBreach(temperatureInC);
     }
     
-    public static void checkAndAlert(
+    public static boolean checkAndAlert(
     		AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
     	
     	CoolingType coolingType = batteryChar.getCoolingType();
 		BreachType breachType = coolingType .getInstance().classifyTemperatureBreach(temperatureInC);
-        alertTarget.getInstance().sendToTarget(breachType);
+        return alertTarget.getInstance().sendToTarget(breachType);
       
     }
 }
