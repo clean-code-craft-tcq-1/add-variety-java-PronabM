@@ -5,6 +5,8 @@ import typewiseAlert.cooling.CoolingType;
 
 public class TypewiseAlert 
 {
+	private TypewiseAlert() {}
+	
     public static BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
       return BreachType.inferBreach(value, lowerLimit, upperLimit);
     }

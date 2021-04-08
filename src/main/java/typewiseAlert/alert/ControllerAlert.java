@@ -3,6 +3,8 @@ package typewiseAlert.alert;
 import typewiseAlert.BreachType;
 
 public class ControllerAlert implements IAlert {
+	
+	protected ControllerAlert() {}
 
 	@Override
 	public boolean sendToTarget(BreachType breachType) {

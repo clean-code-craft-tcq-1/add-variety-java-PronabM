@@ -3,6 +3,8 @@ package typewiseAlert.alert;
 import typewiseAlert.BreachType;
 
 public class EmailAlert implements IAlert {
+	
+	protected EmailAlert() {} 
 
 	@Override
 	public boolean sendToTarget(BreachType breachType) {
