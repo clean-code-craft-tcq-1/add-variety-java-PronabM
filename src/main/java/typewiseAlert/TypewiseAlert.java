@@ -19,7 +19,7 @@ public class TypewiseAlert
     		AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
     	
     	CoolingType coolingType = batteryChar.getCoolingType();
-		BreachType breachType = coolingType .getInstance().classifyTemperatureBreach(temperatureInC);
+		BreachType breachType = coolingType.getInstance().classifyTemperatureBreach(temperatureInC);
         return alertTarget.getInstance().sendToTarget(breachType);
       
     }

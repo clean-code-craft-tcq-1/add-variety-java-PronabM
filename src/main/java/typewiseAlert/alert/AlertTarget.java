@@ -2,6 +2,7 @@ package typewiseAlert.alert;
 
 public enum AlertTarget {
 	TO_CONTROLLER(new ControllerAlert()),
+	TO_CONSOLE(new ConsoleAlert()),
     TO_EMAIL(new EmailAlert());
     
     private IAlert instance;

@@ -79,4 +79,14 @@ public class TypewiseAlertTest
     	assertFalse(TypewiseAlert.checkAndAlert(AlertTarget.TO_EMAIL, battery, 20));
     	assertTrue(TypewiseAlert.checkAndAlert(AlertTarget.TO_EMAIL, battery, 50));
     }
+    
+    @Test
+    public void checksAndAlertsToConsole()
+    {
+    	BatteryCharacter battery = new BatteryCharacter(CoolingType.HI_ACTIVE_COOLING, "Exide");
+    	assertTrue(TypewiseAlert.checkAndAlert(AlertTarget.TO_CONSOLE, battery, Double.NaN));
+    	assertTrue(TypewiseAlert.checkAndAlert(AlertTarget.TO_CONSOLE, battery, -1));
+    	assertTrue(TypewiseAlert.checkAndAlert(AlertTarget.TO_CONSOLE, battery, 20));
+    	assertTrue(TypewiseAlert.checkAndAlert(AlertTarget.TO_CONSOLE, battery, 50));
+    }
 }
